@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  color: #333;
+  background: #efefef;
+  font-size: 3vw;
+}
+
+// ************************************************
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+  min-height: 100vh;
+}
+
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100%;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+  z-index: 100;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+  opacity: 1;
+}
+
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  opacity: 0.5;
+  width: 7px;
+  border-radius: 10px;
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+// ************************************************
+header {
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333;
+  z-index: 5;
+  nav {
+    width: 30%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      list-style: none;
+
+      li {
+        font-size: 1vw;
+        a {
+          color: #efefef;
+          text-decoration: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.content {
+  padding: 20vh 3vw 3vw 3vw;
+  line-height: 1.8;
+
+  .title-container {
+    overflow: hidden;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-family: "Barlow Semi Condensed", sans-serif;
+      transform: translateY(0%);
+      font-size: 5vw;
+    }
+  }
+  .semiTitle-container {
+    height: 10vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    h1 {
+      font-size: 3vw;
+    }
+  }
+  .footerTitle-container {
+    height: 10vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      font-size: 3vw;
+    }
+  }
+  .para {
+    padding-top: 10vh;
+  }
+}
+.red {
+  background: red;
+}
+
+button {
+  border: none;
+  background: #333;
+  color: #efefef;
+  height: 100px;
+  width: 200px;
+  border-radius: 10px;
+  font-size: 2vw;
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.img {
+  position: absolute;
+  width: 50vw;
+  top: 0%;
+  right: 5%;
+}
